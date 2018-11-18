@@ -1,0 +1,25 @@
+<%- include("partials/header")%>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title ">
+                <h1><%= pageTitle %></h1>
+            </div>
+            <form class="" action="/compose" method="post">
+                <div class="form-group">
+                    <label for="newTextTitle">Title</label>
+                    <input class="form-control" type="text" name="newTextTitle"placeholder="Your Post Title">
+                </div>
+                <div class="form-group">
+                    <label for="newText">Post</label>
+                    <textarea rows=10 class="form-control" name="newText" placeholder="Input Your new post here" autocomplete="off"></textarea>
+                </div>
+                <div class="form-group text-right">
+                    <button class="btn btn-primary btn-lg" type="submit" name="button">Publish</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer")%>

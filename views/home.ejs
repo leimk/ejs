@@ -1,0 +1,12 @@
+<%- include("partials/header")%>
+<h1><%= pageTitle %></h1>
+<p><%= content %></p>
+<% userAdded.forEach(function(newText){ %>
+    <h3><%= newText.title %></h3>
+<% if(newText.newText.length > 100){ %>
+    <p><%= newText.newText.substring(0,100) %>  ... <a href="/posts/<%= newText.title %>">Read More</a> </p>
+<%  } else { %>
+    <p><%= newText.newText %></p>
+<% } %>
+<% }); %>
+<%- include("partials/footer")%>
